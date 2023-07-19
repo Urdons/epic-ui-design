@@ -20,7 +20,7 @@ body {
     border-radius: 4px;
     border: 4px double transparent;
 
-    background-image: linear-gradient(hsl(0, 0%, 20%), black), 
+    background-image: linear-gradient(hsl(0, 0%, 20%), hsl(0, 0%, 0%)), 
     linear-gradient(hsl(0, 0%, 80%), hsl(0, 0%, 100%));
     background-origin: border-box;
     background-clip: padding-box, border-box;
@@ -65,9 +65,18 @@ body {
     background-image: linear-gradient(hsl(0, 0%, 90%), hsl(0, 0%, 90%));
 }
 
-.button.active {
-    position: relative;
+.button:hover {
     z-index: 0;
-    transform: translateY(0.5em);
-    filter: brightness(50%);
+    transform: translateY(5%);
+}
+
+.button:active {
+    z-index: 0;
+    transform: translateY(30%);
+    filter: opacity(50%);
+}
+
+.button:active:hover {
+    z-index: 0;
+    transform: translateY(35%);
 }
